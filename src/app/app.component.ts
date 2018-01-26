@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentNumber: number;
+
+  onUpdateNumber(number: number) {
+    this.currentNumber = number;
+  }
 }
