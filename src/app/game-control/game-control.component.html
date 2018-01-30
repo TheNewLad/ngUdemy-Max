@@ -1,8 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <button class="btn btn-primary" (click)="startGame()" [disabled]="disableStart">Start Game</button>
-      <button class="btn btn-danger" (click)="endGame()">Stop Game</button>
+      <button *ngIf="!gameStarted; else stopGame" class="btn btn-primary" (click)="startGame()">Start Game</button>
+      <ng-template #stopGame>
+        <button class="btn btn-danger" (click)="endGame()">Stop Game</button>
+      </ng-template>
     </div>
   </div>
 </div>

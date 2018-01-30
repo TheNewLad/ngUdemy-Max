@@ -10,7 +10,7 @@ export class GameControlComponent implements OnInit {
   number = 0;
   @Output() emitNumber = new EventEmitter<number>();
   ref;
-  disableStart = false;
+  gameStarted = false;
   
   constructor() { }
 
@@ -27,12 +27,12 @@ export class GameControlComponent implements OnInit {
     this.ref = setInterval(() => {
       this.incrementNumber();
     }, 1000);
-    this.disableStart = true;
+    this.gameStarted = true;
   }
 
   endGame() {
     clearInterval(this.ref);
-    this.disableStart = false;
+    this.gameStarted = false;
   }
 
 }
