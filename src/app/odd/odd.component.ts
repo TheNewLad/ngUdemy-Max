@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./odd.component.css']
 })
 export class OddComponent implements OnInit {
+  oddContainer: number[] = [];
 
-  constructor() { }
+  constructor() {
+    // this.oddContainer.push(oddNumber);  
+  }
 
   ngOnInit() {
   }
