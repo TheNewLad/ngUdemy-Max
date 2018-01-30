@@ -17,4 +17,22 @@
 </div>
 
 <app-game-control (emitNumber)="onUpdateNumber($event)"></app-game-control>
-<p>{{ currentNumber }}</p>
+<!-- <p>{{ currentNumber }}</p> -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+        <app-odd
+          *ngFor="let oddNumber of oddNumbers"
+          >
+          <p>Odd - {{ oddNumber }}</p>
+        </app-odd>
+    </div>
+    <div class="col-xs-6">
+        <app-even 
+          *ngFor="let evenNumber of evenNumbers"
+          >
+          <p>Even - {{ evenNumber }}</p>
+        </app-even>
+    </div>
+  </div>
+</div>
