@@ -9,7 +9,7 @@ export class ActiveUsersComponent {
   @Input() users: string[];
   @Output() userSetToInactive = new EventEmitter<number>();
 
-  onSetToInactive(id: number) {
-    this.userSetToInactive.emit(id);
-  }
+  // onSetToInactive(id: number) {
+  //   this.userSetToInactive.emit(id);
+  // }
 }
